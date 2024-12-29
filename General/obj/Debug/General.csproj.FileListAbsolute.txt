@@ -1,0 +1,6 @@
+C:\Users\M\source\repos\Project Assistant\General\bin\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\General\bin\Debug\General.pdb
+C:\Users\M\source\repos\Project Assistant\General\obj\Debug\General.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\General\obj\Debug\General.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\General\obj\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\General\obj\Debug\General.pdb

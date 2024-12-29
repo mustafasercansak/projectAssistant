@@ -1,0 +1,9 @@
+C:\Users\M\source\repos\Project Assistant\ControlCenter\obj\Debug\ControlCenter.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\ControlCenter\obj\Debug\ControlCenter.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\ControlCenter\bin\Debug\ControlCenter.dll
+C:\Users\M\source\repos\Project Assistant\ControlCenter\bin\Debug\ControlCenter.pdb
+C:\Users\M\source\repos\Project Assistant\ControlCenter\obj\Debug\ControlCenter.dll
+C:\Users\M\source\repos\Project Assistant\ControlCenter\obj\Debug\ControlCenter.pdb
+C:\Users\M\source\repos\Project Assistant\ControlCenter\obj\Debug\ControlCenter.csproj.CopyComplete
+C:\Users\M\source\repos\Project Assistant\ControlCenter\bin\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\ControlCenter\bin\Debug\General.pdb

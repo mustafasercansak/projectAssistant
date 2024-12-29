@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE57F3EB-3996-4292-AD7B-5B0EF0F2E96E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlCenter</RootNamespace>
+    <AssemblyName>ControlCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connections.cs" />
+    <Compile Include="Constant\DMError.cs" />
+    <Compile Include="Constant\DMGroupFilter.cs" />
+    <Compile Include="Constant\DMObjects.cs" />
+    <Compile Include="Constant\DMSVM_OPERATION.cs" />
+    <Compile Include="Constant\DM_SD.cs" />
+    <Compile Include="Constant\DM_VARSCALE.cs" />
+    <Compile Include="Constant\DMVarState.cs" />
+    <Compile Include="Constant\GAPIMSLE.cs" />
+    <Compile Include="Constant\MachineType.cs" />
+    <Compile Include="Constant\MCPDCon.cs" />
+    <Compile Include="Constant\MCPNCon.cs" />
+    <Compile Include="Constant\MCPVarProt.cs" />
+    <Compile Include="Constant\MCP_DVAR_FLAG.cs" />
+    <Compile Include="Constant\MCP_VARLIM.cs" />
+    <Compile Include="Constant\MCP_VARPROT.cs" />
+    <Compile Include="Constant\OpenMode.cs" />
+    <Compile Include="Constant\VARFLAGS2.cs" />
+    <Compile Include="Constant\VarUpdateState.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="DataManagerNotifyVariableEventArgs.cs" />
+    <Compile Include="DMDeactivate.cs" />
+    <Compile Include="DMNotifyClass.cs" />
+    <Compile Include="DMNotifyCodeData.cs" />
+    <Compile Include="DMNotifyCodeError.cs" />
+    <Compile Include="DMNotifyCodeWarning.cs" />
+    <Compile Include="DMVarTypes.cs" />
+    <Compile Include="Drivers.cs" />
+    <Compile Include="Groups.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Connections\IConnectionSpecific.cs" />
+    <Compile Include="Interface\UpdateData.cs" />
+    <Compile Include="Objects.cs" />
+    <Compile Include="Runtime.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="STDLIB.cs" />
+    <Compile Include="Constant\DM_E.cs" />
+    <Compile Include="Constant\DM_NOTIFY_CLASS.cs" />
+    <Compile Include="Constant\MAX_DM.cs" />
+    <Compile Include="Convert\ConvertSByte.cs" />
+    <Compile Include="DataManager.cs" />
+    <Compile Include="DataManagerNotifyEventArgs.cs" />
+    <Compile Include="StartupEntry.cs" />
+    <Compile Include="Structures\COLORREF.cs" />
+    <Compile Include="Structures\DM_BITFIELD_BIT_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_ENUM_CONNECTION_DATA.cs" />
+    <Compile Include="Structures\DM_ENUM_DRIVERUNIT_DATA.cs" />
+    <Compile Include="Structures\DM_ENUM_DRIVER_DATA.cs" />
+    <Compile Include="Structures\DM_ENUM_GROUP_DATA.cs" />
+    <Compile Include="Structures\DM_SHIFT_HOLYDAY.cs" />
+    <Compile Include="Structures\DM_SHIFT.cs" />
+    <Compile Include="Structures\DM_SHIFT_INFO.cs" />
+    <Compile Include="Structures\DM_STRUCT_MEMBER_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_TYPE_DESCRIPTOR_EXSTR.cs" />
+    <Compile Include="Structures\DM_VAR_SCALE_PARAM.cs" />
+    <Compile Include="Structures\GAPI_MODIFY_STARTLIST_ENTRY.cs" />
+    <Compile Include="Structures\MCP_NEWDRIVER_DATA.cs" />
+    <Compile Include="Structures\MCP_NEWGROUP_DATA.cs" />
+    <Compile Include="Structures\SYSTEMTIME.cs" />
+    <Compile Include="Tags.cs" />
+    <Compile Include="Structures\DM_ARRAY_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_CONNECTION_DATA_EXSTR.cs" />
+    <Compile Include="Structures\DM_CONNECTION_DATA.cs" />
+    <Compile Include="Structures\DM_CONNKEY.cs" />
+    <Compile Include="Structures\DM_CYCLE_INFO.cs" />
+    <Compile Include="Structures\DM_FORMAT_INFO.cs" />
+    <Compile Include="Structures\DM_GROUPFILTER.cs" />
+    <Compile Include="Structures\DM_MACHINE_TABLE.cs" />
+    <Compile Include="Structures\DM_SCALE_INFO.cs" />
+    <Compile Include="Structures\DM_SD_TARGET_APP.cs" />
+    <Compile Include="Structures\DM_SD_TARGET_MACHINE.cs" />
+    <Compile Include="Structures\DM_SEND_DATA_STRUCT.cs" />
+    <Compile Include="Structures\DM_STRUCT_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_VARGRPKEY_EXSTR.cs" />
+    <Compile Include="Structures\DM_VARGRPKEY.cs" />
+    <Compile Include="Structures\DM_VARGRP_DATA_EXSTR.cs" />
+    <Compile Include="Structures\DM_VARGRP_DATA.cs" />
+    <Compile Include="Structures\DM_VARKEY_EXSTR.cs" />
+    <Compile Include="Structures\DM_VAR_UPDATE_STRUCT_EXSTR.cs" />
+    <Compile Include="Structures\DM_VAR_UPDATE_STRUCTEX.cs" />
+    <Compile Include="Structures\DM_VAR_UPDATE_STRUCT.cs" />
+    <Compile Include="Structures\MCP_CHNCONVERSION_EXSTR.cs" />
+    <Compile Include="Structures\MCP_CHNCONVERSION.cs" />
+    <Compile Include="Structures\MCP_DELETECONNECTION_DATA.cs" />
+    <Compile Include="Structures\MCP_DELETEVARIABLE_DATA.cs" />
+    <Compile Include="Structures\MCP_NEWCONNECTION_DATA_EXSTR.cs" />
+    <Compile Include="Structures\MCP_NEWCONNECTION_DATA.cs" />
+    <Compile Include="Structures\MCP_NEWMACHINE_DATA.cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA_EXSTR.cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA_EX4.cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA_EX.cs" />
+    <Compile Include="Structures\MCP_CREATENEWVARIABLE_DATA_EXSTR_75.cs" />
+    <Compile Include="Structures\MCP_CREATENEWVARIABLE_DATA_EXSTR_7.cs" />
+    <Compile Include="Structures\MCP_CREATENEWVARIABLE_DATA_EXSTR .cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA_5.cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA_4.cs" />
+    <Compile Include="Structures\MCP_NEWVARIABLE_DATA.cs" />
+    <Compile Include="Constant\EnumVarData.cs" />
+    <Compile Include="Constant\EnumVariablesTypes.cs" />
+    <Compile Include="GeneralFunctions.cs" />
+    <Compile Include="Structures\MCP_STARTLIST_DATA.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_COMMON_EXSTR.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_COMMON_EX.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_LIMITS5.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_LIMITS.cs" />
+    <Compile Include="ProjectAdministration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructuredTags.cs" />
+    <Compile Include="Constant\DMEnumVarData.cs" />
+    <Compile Include="Structures\DM_BITFIELD_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_DIRECTORY_INFO.cs" />
+    <Compile Include="Constant\DM_NOTIFY.cs" />
+    <Compile Include="Structures\DM_PROJECT_INFO.cs" />
+    <Compile Include="Constant\DM_SDMODE.cs" />
+    <Compile Include="Structures\DM_TYPEREF.cs" />
+    <Compile Include="Structures\DM_TYPEREF_EXSTR.cs" />
+    <Compile Include="Structures\DM_TYPE_DESCRIPTOR.cs" />
+    <Compile Include="Structures\DM_TYPE_UNION.cs" />
+    <Compile Include="Structures\DM_VARFILTER.cs" />
+    <Compile Include="Constant\DM_VARFILTER_FLAGS.cs" />
+    <Compile Include="Constant\DM_VARFILTER_TYPES.cs" />
+    <Compile Include="Structures\DM_VARIABLE_DATA.cs" />
+    <Compile Include="Structures\DM_VARIABLE_DATA4.cs" />
+    <Compile Include="Structures\DM_VARIABLE_DATA_EXSTR.cs" />
+    <Compile Include="Structures\DM_VARIABLE_DATA_EXSTR_7.cs" />
+    <Compile Include="Constant\DM_VARIABLE_FLAGS.cs" />
+    <Compile Include="Constant\DM_VARIABLE_NOTIFY.cs" />
+    <Compile Include="Structures\DM_VARKEY.cs" />
+    <Compile Include="Constant\DM_VARKEY_TYPE.cs" />
+    <Compile Include="Structures\DM_VARLIMIT.cs" />
+    <Compile Include="Constant\DM_VARTYPES.cs" />
+    <Compile Include="Constant\DM_VAR_PROPERTY.cs" />
+    <Compile Include="Structures\MCP_NEWPROJECT_DATA.cs" />
+    <Compile Include="Constant\MCP_NPRO_FLAG.cs" />
+    <Compile Include="Structures\MCP_NVAR_FLAG.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_COMMON.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_LIMITS_EXSTR.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_LIMITS_EX.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_PROTOCOL_EX.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_PROTOCOL.cs" />
+    <Compile Include="Structures\MCP_VARIABLE_SCALES.cs" />
+    <Compile Include="Variant.cs" />
+    <Compile Include="VARIANTARG.cs" />
+    <Compile Include="VariantArray.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{7601acb1-b0bf-4cdb-b0c3-d5fbeba393ed}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

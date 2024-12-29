@@ -1,0 +1,9 @@
+C:\Users\M\source\repos\Project Assistant\ProjectManager\obj\Debug\ProjectManager.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\ProjectManager\obj\Debug\ProjectManager.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\ProjectManager\bin\Debug\ProjectManager.dll
+C:\Users\M\source\repos\Project Assistant\ProjectManager\bin\Debug\ProjectManager.pdb
+C:\Users\M\source\repos\Project Assistant\ProjectManager\bin\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\ProjectManager\bin\Debug\General.pdb
+C:\Users\M\source\repos\Project Assistant\ProjectManager\obj\Debug\ProjectManager.csproj.CopyComplete
+C:\Users\M\source\repos\Project Assistant\ProjectManager\obj\Debug\ProjectManager.dll
+C:\Users\M\source\repos\Project Assistant\ProjectManager\obj\Debug\ProjectManager.pdb

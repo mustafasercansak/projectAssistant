@@ -1,0 +1,82 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="General" #>
+#include "apdefap.h"
+
+int gscAction( void )
+{
+	// WINCC:TAGNAME_SECTION_START
+	#define TagLoadData		"<#=UnitName#>-U.LoadData"
+	#define TagBatch		"<#=UnitName#>-U.Batch"
+	#define TagProdID		"<#=UnitName#>-U.ProdID"
+	#define TagSourceID		"<#=UnitName#>-P.SourceID"
+	#define TagSourceBin	"<#=UnitName#>-P.SB-Number"
+	#define TagCleaning		"<#=UnitName#>-P.Cleaning"
+	#define TagIntakeSpeed	"<#=UnitName#>-P.IT-Speed"
+	#define TagMagnet		"<#=UnitName#>-P.Magnet"
+	#define TagFineCleaning	"<#=UnitName#>-P.FineCleaning"
+	#define TagCOTime		"<#=UnitName#>-P.IT-CO-Time"
+	// WINCC:TAGNAME_SECTION_END
+
+	#define PROFILE_ID		<#=ProfileId#>
+	#define LINE_ID			<#=LineId#>	// Intakeline ID
+	#define LINE_CODE			0	// Default = 0. Can be used when parameters for multiple lines (%d in tagname)
+	
+	BOOL	bCleaning = FALSE, bMagnet = FALSE, bFineCleaning = FALSE;
+	short	nSourceID = 0, nSourceBin = 0, nCOTime = 0;
+	long	lProdID = 0;
+	long	lBatchnumber = 0;
+	float	fCap = 0, fSpeed = 0;
+	char	szProdIDCode[16] = "";
+
+	printf("%s triggered... \r\n", TagLoadData);
+
+	if (GetTagBitWait(TagLoadData))
+	{
+		LoadITBatch(LINE_ID, &lBatchnumber, &lProdID, szProdIDCode, &nSourceID, &nSourceBin, &bCleaning, &fCap, &fSpeed, &bMagnet, &bFineCleaning, &nCOTime);
+
+		if (lBatchnumber > 0 && lProdID > 0)
+		{
+			SetTagSDWordWait(TagProdID, lProdID);
+			SetTagSDWordWait(TagBatch, lBatchnumber);
+			SetTagSWordWait(TagSourceID, nSourceID);
+			SetTagSWordWait(TagSourceBin, nSourceBin);
+			SetTagBitWait(TagCleaning, (SHORT)bCleaning);
+			SetTagFloatWait(TagIntakeSpeed, fSpeed);
+			SetTagBitWait(TagMagnet, (SHORT)bMagnet);
+			SetTagBitWait(TagFineCleaning, (SHORT)bFineCleaning);
+			SetTagSWordWait(TagCOTime, nCOTime);
+			
+			if (lProdID == 0) SetTagSDWordWait(TagBatch, 0);
+
+		      LoadLineConstants(LINE_ID, PROFILE_ID, LINE_CODE);
+		}
+		printf("Executed\r\n");
+
+		SetTagBitWait(TagLoadData, FALSE);
+	}
+
+	return 0; 
+}
+<#+ 
+public string UnitName = "EL01";
+public int ProfileId = 101;
+public int LineId = 101;
+public CAction Action 
+{
+	get 
+	{
+		return new CAction() {
+			Name = $"LoadUnitData{UnitName}",
+			Source = this.TransformText(),
+			Triggers = new List<string>() {
+				$"{UnitName}-U.LoadData"
+			},
+			Path = $"Intake\\{UnitName}\\",
+		};
+	}
+}
+#>

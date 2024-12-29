@@ -1,0 +1,9 @@
+C:\Users\M\source\repos\Project Assistant\ScriptText\obj\Debug\ScriptText.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\ScriptText\obj\Debug\ScriptText.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\ScriptText\bin\Debug\ScriptText.dll
+C:\Users\M\source\repos\Project Assistant\ScriptText\bin\Debug\ScriptText.pdb
+C:\Users\M\source\repos\Project Assistant\ScriptText\obj\Debug\ScriptText.dll
+C:\Users\M\source\repos\Project Assistant\ScriptText\obj\Debug\ScriptText.pdb
+C:\Users\M\source\repos\Project Assistant\ScriptText\bin\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\ScriptText\bin\Debug\General.pdb
+C:\Users\M\source\repos\Project Assistant\ScriptText\obj\Debug\ScriptText.csproj.CopyComplete

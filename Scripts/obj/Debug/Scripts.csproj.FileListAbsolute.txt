@@ -1,0 +1,9 @@
+C:\Users\M\source\repos\Project Assistant\Scripts\bin\Debug\Scripts.dll
+C:\Users\M\source\repos\Project Assistant\Scripts\bin\Debug\Scripts.pdb
+C:\Users\M\source\repos\Project Assistant\Scripts\obj\Debug\Scripts.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\Scripts\obj\Debug\Scripts.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\Scripts\obj\Debug\Scripts.dll
+C:\Users\M\source\repos\Project Assistant\Scripts\obj\Debug\Scripts.pdb
+C:\Users\M\source\repos\Project Assistant\Scripts\obj\Debug\Scripts.csproj.CopyComplete
+C:\Users\M\source\repos\Project Assistant\Scripts\bin\Debug\General.dll
+C:\Users\M\source\repos\Project Assistant\Scripts\bin\Debug\General.pdb

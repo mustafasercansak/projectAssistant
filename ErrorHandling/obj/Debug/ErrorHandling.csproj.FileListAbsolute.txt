@@ -1,0 +1,6 @@
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\bin\Debug\ErrorHandling.dll
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\bin\Debug\ErrorHandling.pdb
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\obj\Debug\ErrorHandling.csproj.AssemblyReference.cache
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\obj\Debug\ErrorHandling.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\obj\Debug\ErrorHandling.dll
+C:\Users\M\source\repos\Project Assistant\ErrorHandling\obj\Debug\ErrorHandling.pdb
